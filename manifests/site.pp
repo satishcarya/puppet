@@ -58,3 +58,4 @@ file {'/etc/motd':
         enable => 'true',
 }
 }
+
