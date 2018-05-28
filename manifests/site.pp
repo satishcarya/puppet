@@ -22,7 +22,11 @@ file {'/etc/motd':
         }
 
         service {'postfix':
-        ensure => 'stopped',
+        ensure => 'running',
+        enable => 'true',
+}
+service {'ntpd':
+        ensure => 'running',
         enable => 'true',
 }
 }
