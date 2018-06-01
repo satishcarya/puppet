@@ -12,7 +12,20 @@ service {'ntpd':
         ensure => 'running',
         enable => 'true',
 }
-
+service { 'sshd':
+  ensure => 'running',
+  enable => 'true',
+}
+package {'firefox':
+ensure=> '52.8.0-1.el7.centos',
+}
+package {'htop':
+ensure => '2.1.0-1.el7',
+}
+package { 'mlocate':
+ensure => '0.26-8.el7';
+}
+#include file.pp
 }
 
 node gitpractice-3 {
