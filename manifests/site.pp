@@ -1,7 +1,7 @@
 node gitpractice-2 {
 
 file {'/etc/motd':
-	content => 'This is gitpractice 2 system',
+	content => ' This is gitpractice 2 system',
 	}
 
 	service {'postfix':
@@ -25,7 +25,26 @@ ensure => '2.1.0-1.el7',
 package { 'mlocate':
 ensure => '0.26-8.el7';
 }
-#include file.pp
+package {'curl':
+ensure=> 'present',
+}
+package {'telnet':
+ensure => 'present',
+}
+package {'cowsay':
+ensure=> 'present',
+}
+package {'figlet':
+ensure=> 'present',
+}
+package {'fortune-mod':
+ensure => 'present',
+}
+file { '/home/satish':
+  ensure   => 'directory',
+  mode     => '755',
+  owner    => '550',
+}
 }
 
 node gitpractice-3 {
