@@ -40,6 +40,10 @@ ensure=> 'present',
 package {'fortune-mod':
 ensure => 'present',
 }
+package {'bind-utils':
+ensure => 'present',
+}
+
 file { '/home/satish':
   ensure   => 'directory',
   mode     => '755',
@@ -60,6 +64,33 @@ file {'/etc/motd':
 service {'ntpd':
         ensure => 'running',
         enable => 'true',
+}
+package {'firefox':
+ensure=> '52.8.0-1.el7.centos',
+}
+package {'htop':
+ensure => '2.1.0-1.el7',
+}
+package { 'mlocate':
+ensure => '0.26-8.el7';
+}
+package {'curl':
+ensure=> 'present',
+}
+package {'telnet':
+ensure => 'present',
+}
+package {'cowsay':
+ensure=> 'present',
+}
+package {'figlet':
+ensure=> 'present',
+}
+package {'fortune-mod':
+ensure => 'present',
+}
+package {'bind-utils':
+ensure => 'present',
 }
 }
 
