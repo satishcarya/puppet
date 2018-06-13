@@ -114,15 +114,49 @@ gid => '1000',
 shell => '/bin/bash',
 groups => ['adm','puppet']
 }
-node default {
+node gitpractice {
 
 file {'/etc/motd':
-        content => 'Tis is gitpractice 2 system',
+        content => 'PuppetMaster',
         }
 
         service {'postfix':
-        ensure => 'stopped',
+        ensure => 'running',
         enable => 'true',
+}
+service {'ntpd':
+        ensure => 'running',
+        enable => 'true',
+}
+package {'firefox':
+ensure=> '52.8.0-1.el7.centos',
+}
+package {'htop':
+ensure => '2.1.0-1.el7',
+}
+package { 'mlocate':
+ensure => '0.26-8.el7';
+}
+package {'curl':
+ensure=> 'present',
+}
+package {'telnet':
+ensure => 'present',
+}
+package {'cowsay':
+ensure=> 'present',
+}
+package {'figlet':
+ensure=> 'present',
+}
+package {'fortune-mod':
+ensure => 'present',
+}
+package {'bind-utils':
+ensure => 'present',
+}
+package {'tig.x86_64':
+ensure => 'present',
 }
 }
 
