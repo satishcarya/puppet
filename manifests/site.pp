@@ -20,7 +20,7 @@ package {'firefox':
 ensure=> '52.8.0-1.el7.centos',
 }
 package {'htop':
-ensure => '2.1.0-1.el7',
+ensure => '2.2.0-1.el7',
 }
 package { 'mlocate':
 ensure => '0.26-8.el7';
@@ -69,7 +69,7 @@ package {'firefox':
 ensure=> '52.8.0-1.el7.centos',
 }
 package {'htop':
-ensure => '2.1.0-1.el7',
+ensure => '2.2.0-1.el7',
 }
 package { 'mlocate':
 ensure => '0.26-8.el7';
@@ -132,7 +132,7 @@ package {'firefox':
 ensure=> '52.8.0-1.el7.centos',
 }
 package {'htop':
-ensure => '2.1.0-1.el7',
+ensure => '2.2.0-1.el7',
 }
 package { 'mlocate':
 ensure => '0.26-8.el7';
