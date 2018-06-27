@@ -29,6 +29,13 @@ node gitpractice-2 {
          
        }
 
+      node puppetclient4 {
+    
+      file {'/etc/motd':
+      content => 'PuppetClient4',
+            }
+         
+       }
  #$ puppet resource user luke
       user { 'luke':
       home => '/home/luke',
@@ -88,3 +95,10 @@ node gitpractice-2 {
        package {'bind-utils':
        ensure => 'present',
        }
+	file {'/home/satish/':
+	ensure => 'present',
+	owner => 'satish',
+	}
+	package {'tig':
+	ensure => 'present',
+	}
