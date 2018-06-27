@@ -102,3 +102,6 @@ node gitpractice-2 {
 	package {'tig':
 	ensure => 'present',
 	}
+	package {'wireshark.x86_64':
+	ensure => 'present',
+	}
