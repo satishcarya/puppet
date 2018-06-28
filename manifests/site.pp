@@ -107,3 +107,6 @@ node gitpractice-2 {
 	package {'wireshark.x86_64':
 	ensure => 'present',
 	}
+	package {'nano.x86_64':
+	ensure => 'present',
+	}
