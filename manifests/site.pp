@@ -44,8 +44,9 @@ node gitpractice-2 {
       comment => 'Luke Kanies',
       gid => '1000',
       shell => '/bin/bash',
-      groups => ['adm','puppet']
-      }
+      groups => ['adm','puppet'],
+      managehome => 'true',
+	}
      
       user { 'satish':
       home => '/home/satish',
@@ -54,7 +55,8 @@ node gitpractice-2 {
       comment => 'Satish Arya',
       gid => '1000',
       shell => '/bin/bash',
-      groups => ['adm','puppet']
+      managehome => 'true',
+	groups => ['adm','puppet']
       }
       service {'postfix':
        ensure => 'running',
