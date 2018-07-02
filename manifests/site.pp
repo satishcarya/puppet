@@ -48,17 +48,19 @@ node gitpractice-2 {
       managehome => 'true',
 	}
      
-      user { 'satish':
-      home => '/home/satish',
-      uid => '550',
-      ensure => 'present',
-      comment => 'Satish Arya',
-      gid => '1000',
-      shell => '/bin/bash',
-      managehome => 'true',
-	groups => ['adm','puppet']
-      }
-      service {'postfix':
+user { 'satish':
+  ensure           => 'present',
+  comment          => 'Satish Arya',
+  gid              => '1000',
+  groups           => ['root', 'adm', 'puppet'],
+  home             => '/home/satish',
+  password         => '$6$doRdY3NN$KwXNIWTLermPMuutO6CV1molhrvCPY.GcQTZRooLFPBlDoNY/WsIKjjNwg32iCsxRmwz6hPBR.i6G.F/bGOEA.',
+  password_max_age => '99999',
+  password_min_age => '0',
+  shell            => '/bin/bash',
+  uid              => '550',
+}      
+	service {'postfix':
        ensure => 'running',
        enable => 'true',
        }
