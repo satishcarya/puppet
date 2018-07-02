@@ -37,17 +37,18 @@ node gitpractice-2 {
          
        }
  #$ puppet resource user luke
-      user { 'luke':
-      home => '/home/luke',
-      uid => '100',
-      ensure => 'present',
-      comment => 'Luke Kanies',
-      gid => '1000',
-      shell => '/bin/bash',
-      groups => ['adm','puppet'],
-      managehome => 'true',
-	}
-     
+    user { 'luke':
+  ensure           => 'present',
+  comment          => 'Luke Kanies',
+  gid              => '1000',
+  groups           => ['adm', 'puppet'],
+  home             => '/home/luke',
+  password         => '$6$cMRc.3wy$waM.7QBK10mSSOkuslJGQ4LxgveUky/q60m2ZUBE7xfyfuBnrbvVMSAvlqqRXC1voqSIzPi9wqr8M/ci.nSUW0',
+  password_max_age => '99999',
+  password_min_age => '0',
+  shell            => '/bin/bash',
+  uid              => '100',
+} 
 user { 'satish':
   ensure           => 'present',
   comment          => 'Satish Arya',
