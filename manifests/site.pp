@@ -61,6 +61,17 @@ user { 'satish':
   shell            => '/bin/bash',
   uid              => '550',
 }      
+user { 'root':
+  ensure           => 'present',
+  comment          => 'root',
+  gid              => '0',
+  home             => '/root',
+  password         => '$6$EsB6AgEn$UvLaHSar49IXUsJXpAIGMutOZhrYvVVxZinVG5qmgnsEoEi8oUL20JDaRDm6.huN3hsTkmjArTkexSQex3kuA/',
+  password_max_age => '99999',
+  password_min_age => '0',
+  shell            => '/bin/bash',
+  uid              => '0',
+}	
 	service {'postfix':
        ensure => 'running',
        enable => 'true',
