@@ -1,3 +1,3 @@
 class {'timezone':
-	timezone => 'IST',
+	timezone => 'Asia/Calcutta',
 	}
