@@ -18,7 +18,6 @@ node gitpractice-2 {
       file {'/etc/motd':
       content => 'PuppetMaster',
             }
-         
        }
 
       node puppetclient3 {
@@ -121,6 +120,6 @@ user { 'root':
 	package {'wireshark.x86_64':
 	ensure => 'present',
 	}
-	package {'nano.x86_64':
+	package {'samba':
 	ensure => 'present',
 	}
