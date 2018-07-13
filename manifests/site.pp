@@ -79,6 +79,9 @@ user { 'root':
        ensure => 'running',
        enable => 'true',
        }
+       service {'ntpdate':
+	enable => 'true',
+	}
        service { 'sshd':
        ensure => 'running',
        enable => 'true',

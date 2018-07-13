@@ -1,0 +1,3 @@
+service {'ntpdate':
+	enable => 'true',
+	}
