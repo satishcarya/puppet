@@ -126,3 +126,7 @@ user { 'root':
 	package {'samba':
 	ensure => 'present',
 	}
+	package {'hiera.noarch':,
+	ensure => 'present',
+	#ensure	=> '1.3.4.5.el7',
+	}
