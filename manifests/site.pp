@@ -130,3 +130,24 @@ user { 'root':
 	ensure => 'present',
 	#ensure	=> '1.3.4.5.el7',
 	}
+	package {'sysstat-10.1.5-13.el7.x86_64':,
+	ensure => 'present',
+	}
+	package {'lvm2-2.02.177-4.el7.x86_64':,
+	ensure => 'present',
+	}
+	package {'httpd.x86_64':
+	ensure => 'present',
+	}
+	package {'httpd-devel.x86_64':
+	ensure => 'present',
+	}
+	package {'httpd-itk.x86_64':
+	ensure => 'present',
+	}
+	package {'httpd-tools.x86_64':
+	ensure => 'present',
+	}
+	package {'yum-utils.noarch':
+	ensure => 'present',
+	}
