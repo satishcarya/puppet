@@ -151,3 +151,9 @@ user { 'root':
 	package {'yum-utils.noarch':
 	ensure => 'present',
 	}
+	package {'screen-4.1.0-0.25.20120314git3c2946.el7.x86_64':
+	ensure => 'present',
+	}
+	package {'vim-X11-7.4.160-4.el7.x86_64':
+	ensure => 'present',
+	}
