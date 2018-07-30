@@ -157,3 +157,5 @@ user { 'root':
 	package {'vim-X11-7.4.160-4.el7.x86_64':
 	ensure => 'present',
 	}
+
+
