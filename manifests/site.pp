@@ -167,3 +167,9 @@ file {'/home/satish7/':
 	package {'pwgen.x86_64':
 	ensure => 'present',
 	}
+	package {'traceroute-2.0.22-2.el7.x86_64':
+	ensure => 'present',
+	}
+	package{;squid.x86_64':
+	ensure => 'present',
+	}
