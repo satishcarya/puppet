@@ -117,8 +117,13 @@ user { 'root':
        ensure => 'present',
        }
 	file {'/home/satish/':
-	ensure => 'present',
+	ensure => 'directory',
 	owner => 'satish',
+	group => 'root',
+	mode =>'0755',
+	}
+	file {'/etc/profile.d/become.sh':
+	content => "alias become='/bin/sudo su -'",
 	}
 	package {'tig':
 	ensure => 'present',
@@ -161,6 +166,12 @@ user { 'root':
 	ensure => 'present',
 	}
 	package {'trafshow-5.2.3-10.el7.x86_64':
+	ensure => 'present',
+	}
+	package {'nmap-ncat.x86_64':
+	ensure => 'present',
+	}
+	package {'psmisc-22.20-15.el7.x86_64':
 	ensure => 'present',
 	}
 file {'/home/satish7/':
