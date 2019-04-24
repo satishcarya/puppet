@@ -23,6 +23,13 @@ node gitpractice-2 {
         }
        }
 
+node gitpractice4 {
+        file {'/etc/motd':
+        content => ' This is gitpractice 2 system',
+        }
+
+        }
+
       node puppetclient3 {
     
       file {'/etc/motd':
@@ -90,10 +97,10 @@ user { 'root':
        enable => 'true',
        }
        package {'firefox':
-       ensure=> '52.8.0-1.el7.centos',
+       ensure=> 'present',
        }
        package {'htop':
-       ensure => '2.2.0-1.el7',
+       ensure => 'present',
        }
        package { 'mlocate':
        ensure => '0.26-8.el7';
@@ -138,10 +145,10 @@ user { 'root':
 	ensure => 'present',
 	#ensure	=> '1.3.4.5.el7',
 	}
-	package {'sysstat-10.1.5-13.el7.x86_64':,
+	package {'sysstat':,
 	ensure => 'present',
 	}
-	package {'lvm2-2.02.177-4.el7.x86_64':,
+	package {'lvm2':,
 	ensure => 'present',
 	}
 	package {'httpd.x86_64':
@@ -162,7 +169,7 @@ user { 'root':
 	package {'screen-4.1.0-0.25.20120314git3c2946.el7.x86_64':
 	ensure => 'present',
 	}
-	package {'vim-X11-7.4.160-4.el7.x86_64':
+	package {'vim-X11':
 	ensure => 'present',
 	}
 	package {'trafshow-5.2.3-10.el7.x86_64':
